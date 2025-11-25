@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="" description="">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(155.0, 145.0)" />
+		<node id="1" name="Bar Plot" qualified_name="Orange.widgets.visualize.owbarplot.OWBarPlot" project_name="Orange3" version="" title="Bar Plot" position="(780.0000000000001, 448.33333333333337)" />
+		<node id="2" name="Box Plot" qualified_name="Orange.widgets.visualize.owboxplot.OWBoxPlot" project_name="Orange3" version="" title="Box Plot" position="(1385.0, 66.66666666666667)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+	</links>
+	<annotations>
+		<text id="0" type="text/plain" rect="(25.0, 244.0, 323.0, 442.0)" font-family="Segoe UI" font-size="16">Paso 1: Carga y Detección de Tipos</text>
+		<text id="1" type="text/plain" rect="(22.0, 281.0, 491.0, 61.0)" font-family="Segoe UI" font-size="16">1_1: Arrastra un widget "File" y carga el dataset pedido_zapatos.csv.</text>
+		<text id="2" type="text/plain" rect="(23.0, 314.0, 710.0, 75.0)" font-family="Segoe UI" font-size="16">1_2: Haz doble clic en el widget. Orange intentará adivinar el tipo de cada variable (Numérica, Categórica, Texto...). Asegúrate de que `precio` sea "Numeric" y que `tipo_zapato`, `material_zapato` y `color_zapato` sean "Categorical".</text>
+		<text id="3" type="text/plain" rect="(28.0, 390.0, 593.0, 75.0)" font-family="Segoe UI" font-size="16">1_3: Las columnas `nombre`, `apellido` e `email` son identificadores. Puedes marcarlas como "Meta" para que no se incluyan en el análisis pero sigan disponibles para consulta.</text>
+		<text id="4" type="text/plain" rect="(728.0, 227.0, 300.0, 54.0)" font-family="Segoe UI" font-size="16">Paso 2: Análisis Categórico con "Bar Plot"</text>
+		<text id="5" type="text/plain" rect="(738.3333333333335, 355.0000000000002, 461.66666666666674, 61.0)" font-family="Segoe UI" font-size="16">2_1: `tipo_zapato`: ¿Cuál es el tipo de zapato más vendido? ¿Y el menos vendido?
+
+</text>
+		<text id="6" type="text/plain" rect="(734.9999999999998, 283.33333333333326, 386.66666666666674, 23.000000000000057)" font-family="Segoe UI" font-size="16">Conecta el widget "File" a un widget "Bar Plot".
+
+</text>
+		<text id="7" type="text/plain" rect="(740.0, 316.66666666666674, 390.0000000000001, 54.0)" font-family="Segoe UI" font-size="16">Ábrelo y explora las siguientes variables:
+</text>
+		<text id="8" type="text/plain" rect="(728.3333333333335, 496.66666666666674, 523.3333333333333, 42.66666666666663)" font-family="Segoe UI" font-size="16">2_2 : `material_zapato`: ¿Qué material domina en las ventas?
+
+</text>
+		<text id="9" type="text/plain" rect="(731.6666666666667, 581.6666666666664, 580.0, 64.66666666666674)" font-family="Segoe UI" font-size="16">2_3 :  `color_zapato`: ¿Hay algún color que sea mucho más popular que el resto?
+
+</text>
+		<text id="10" type="text/plain" rect="(833.3333333333334, 426.6666666666667, 436.66666666666663, 53.333333333333314)" font-family="Segoe UI" font-size="16">Menos vendidos plataformas</text>
+		<text id="11" type="text/plain" rect="(833.3333333333333, 455.0, 385.0, 40.0)" font-family="Segoe UI" font-size="16">Más vendidos tacones de agujas</text>
+		<text id="12" type="text/plain" rect="(733.3333333333334, 538.3333333333334, 486.66666666666663, 53.33333333333337)" font-family="Segoe UI" font-size="16">El cuero</text>
+		<text id="13" type="text/plain" rect="(736.6666666666667, 616.6666666666666, 291.66666666666674, 51.66666666666674)" font-family="Segoe UI" font-size="16">El rojo</text>
+		<text id="14" type="text/plain" rect="(1350.0, 208.33333333333334, 313.3333333333335, 50.00000000000003)" font-family="Segoe UI" font-size="16">Paso 3: Análisis Cuantitativo con "Box Plot"
+</text>
+		<text id="15" type="text/plain" rect="(1351.6666666666667, 248.33333333333334, 463.33333333333326, 51.66666666666666)" font-family="Segoe UI" font-size="16">Conecta el widget "File" a un widget "Box Plot".
+
+</text>
+		<text id="16" type="text/plain" rect="(1353.3333333333335, 273.3333333333333, 356.66666666666674, 87.0)" font-family="Segoe UI" font-size="16">Ábrelo y selecciona la variable `precio`.
+
+</text>
+		<text id="17" type="text/plain" rect="(1351.666666666667, 306.66666666666674, 340.0, 54.0)" font-family="Segoe UI" font-size="16">Preguntas guía (precio):*          
+</text>
+		<text id="18" type="text/plain" rect="(1348.3333333333333, 336.6666666666667, 333.33333333333326, 108.0)" font-family="Segoe UI" font-size="16">¿Cuál es la mediana del precio (la línea dentro de la caja)?
+
+</text>
+		<text id="19" type="text/plain" rect="(1350.0, 441.66666666666674, 443.3333333333335, 93.66666666666674)" font-family="Segoe UI" font-size="16">La "caja" representa el 50% central de los pedidos. ¿Es una caja ancha o estrecha? ¿Qué te dice eso sobre la variabilidad de precios?
+
+</text>
+		<text id="20" type="text/plain" rect="(1350.0000000000005, 590.0000000000006, 423.33333333333326, 85.33333333333337)" font-family="Segoe UI" font-size="16">¿Se detectan valores atípicos (outliers)? ¿Hay zapatos excepcionalmente caros o baratos en comparación con el resto?
+
+</text>
+		<text id="21" type="text/plain" rect="(1791.6666666666667, 210.0, 301.66666666666674, 30.0)" font-family="Segoe UI" font-size="16">Paso 4: Conexión con Python
+
+</text>
+		<text id="22" type="text/plain" rect="(1791.666666666667, 255.00000000000006, 291.66666666666697, 108.0)" font-family="Segoe UI" font-size="16">En tu cuaderno de Python, carga el mismo dataset.
+
+</text>
+		<text id="23" type="text/plain" rect="(1790.0000000000002, 318.3333333333333, 351.66666666666674, 129.0)" font-family="Segoe UI" font-size="16">4_1: Genera los conteos de `tipo_zapato` usando .value_counts(). ¿Coincide el orden con el que viste en el "Bar Plot"?
+
+</text>
+		<text id="24" type="text/plain" rect="(1796.666666666667, 446.66666666666663, 343.33333333333394, 133.33333333333314)" font-family="Segoe UI" font-size="16">4_2: Genera las estadísticas de `precio` usando .describe(). ¿Coincide el valor "50%" (mediana) con la línea que viste en el "Box Plot"? ¿Y los valores "25%" (Q1) y "75%" (Q3) con los bordes de la caja?
+
+</text>
+		<text id="25" type="text/plain" rect="(1353.3333333333335, 395.0, 383.33333333333326, 38.33333333333337)" font-family="Segoe UI" font-size="16">La linea es de 290</text>
+		<text id="26" type="text/plain" rect="(1355.0, 520.0, 435.0, 66.66666666666674)" font-family="Segoe UI" font-size="16">La caja tiene un tamaño estándar, varía entre precios entre los que rondan entre como mínimo 193 y como máximo 386</text>
+		<text id="27" type="text/plain" rect="(1358.3333333333335, 680.0, 428.33333333333326, 73.33333333333337)" font-family="Segoe UI" font-size="16">No hay valores atípicos, eso si, las plataformas son las que tienen precios más altos como media, las plataformas son las que tienen el tope más alto de precio, y lo más barato son  los tacones de aguja, aunque de media son más baratas las sandalias</text>
+		<text id="28" type="text/plain" rect="(1791.6666666666667, 401.6666666666667, 311.66666666666674, 76.66666666666669)" font-family="Segoe UI" font-size="16">Si, dan el mismo resultado, todos 50</text>
+		<text id="29" type="text/plain" rect="(1801.6666666666667, 585.0, 336.66666666666674, 75.0)" font-family="Segoe UI" font-size="16">Si, también coinciden</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASVoQkAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIyzQzovVXNlcnMvYWxlamEvT25lRHJpdmUvRXNjcml0b3Jpby9JQUJEX0FsZWphbmRyby9N
+b2RlbG9zIGRlIEludGVsaWdlbmNpYSBBcnRpZmljaWFsL1RlbWFfM19BbmFsaXNpc19FeHBsb3Jh
+dG9yaW9fRGVfRGF0b3MvRWplcmNpY2lvcy8zX0FuYWxpc2lzX1VuaXZhcmlhZG8vVTNfX3BlZGlk
+b3NfemFwYXRvcy5jc3aUjAZwcmVmaXiUjAdiYXNlZGlylIwHcmVscGF0aJSMF1UzX19wZWRpZG9z
+X3phcGF0b3MuY3N2lIwFdGl0bGWUjACUjAVzaGVldJRoEIwLZmlsZV9mb3JtYXSUTnViaAYpgZR9
+lChoCYxXQzovVXNlcnMvYWxlamEvQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3Np
+dGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2lyaXMudGFilGgLjA9zYW1wbGUtZGF0YXNldHOU
+aA2MCGlyaXMudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjFpDOi9Vc2Vycy9hbGVqYS9BcHBE
+YXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNl
+dHMvdGl0YW5pYy50YWKUaAtoFmgNjAt0aXRhbmljLnRhYpRoD2gQaBFoEGgSTnViaAYpgZR9lCho
+CYxaQzovVXNlcnMvYWxlamEvQXBwRGF0YS9Mb2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUt
+cGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2hvdXNpbmcudGFilGgLaBZoDYwLaG91c2luZy50YWKU
+aA9oEGgRaBBoEk51YmgGKYGUfZQoaAmMYEM6L1VzZXJzL2FsZWphL0FwcERhdGEvTG9jYWwvUHJv
+Z3JhbXMvT3JhbmdlL0xpYi9zaXRlLXBhY2thZ2VzL09yYW5nZS9kYXRhc2V0cy9oZWFydF9kaXNl
+YXNlLnRhYpRoC2gWaA2MEWhlYXJ0X2Rpc2Vhc2UudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJ
+jGFDOi9Vc2Vycy9hbGVqYS9BcHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1w
+YWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvYnJvd24tc2VsZWN0ZWQudGFilGgLaBZoDYwSYnJvd24t
+c2VsZWN0ZWQudGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjFZDOi9Vc2Vycy9hbGVqYS9BcHBE
+YXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNl
+dHMvem9vLnRhYpRoC2gWaA2MB3pvby50YWKUaA9oEGgRaBBoEk51YmWMC3JlY2VudF91cmxzlF2U
+jBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAJyAAAAQAAABMsAAAKeAAACcwAAAF8A
+AATKAAACnQAAAAAAAAAABkAAAAJzAAAAXwAABMoAAAKdlIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJj
+ZZRLAIwDdXJslGgQjA1kb21haW5fZWRpdG9ylH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9z
+ZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZh
+bHVlc5R9lCiMCXZhcmlhYmxlc5RdlGg0fZRoQF2UKF2UKIwCaWSUjBRPcmFuZ2UuZGF0YS52YXJp
+YWJsZZSMEkNvbnRpbnVvdXNWYXJpYWJsZZSTlEsAaBCIZV2UKIwLdGlwb196YXBhdG+UaEaMEERp
+c2NyZXRlVmFyaWFibGWUk5RLAIw2YmFsbGV0IGZsYXRzLCBwbGF0YWZvcm1hcywgc2FuZGFsaWFz
+LCB0YWNvbmVzIGRlIGFndWphlIllXZQojA9tYXRlcmlhbF96YXBhdG+UaExLAIwdY3Vlcm8sIGN1
+ZXJvIHNpbnTDqXRpY28sIHRlbGGUiWVdlCiMDGNvbG9yX3phcGF0b5RoTEsAjClhenVsIG1hcmlu
+bywgYmxhY2ssIGJsYW5jbywgbWFycsOzbiwgcm9qb5SJZV2UKIwGcHJlY2lvlGhMSwBoEIhlXZQo
+jAZub21icmWUaEaMDlN0cmluZ1ZhcmlhYmxllJOUSwJoEIllXZQojAhhcGVsbGlkb5RoWUsCaBCJ
+ZV2UKIwFZW1haWyUaFlLAmgQiWVlc2g2SwF1jAphdHRyaWJ1dGVzlChoRUsChpRoSl2UKIwMYmFs
+bGV0IGZsYXRzlIwLcGxhdGFmb3JtYXOUjAlzYW5kYWxpYXOUjBB0YWNvbmVzIGRlIGFndWphlGWG
+lGhPXZQojAVjdWVyb5SMEGN1ZXJvIHNpbnTDqXRpY2+UjAR0ZWxhlGWGlGhSXZQojAthenVsIG1h
+cmlub5SMBWJsYWNrlIwGYmxhbmNvlIwHbWFycsOzbpSMBHJvam+UZYaUjAZwcmVjaW+USwKGlHSU
+jAVtZXRhc5RoV0sDhpRoW0sDhpRoXUsDhpSHlIwKY2xhc3NfdmFyc5QpjBJtb2RpZmllZF92YXJp
+YWJsZXOUXZR1Ymg7KYGUfZQoaD59lChoQF2UaDR9lGhAXZQoXZQojAxzZXBhbCBsZW5ndGiUaEhL
+AGgQiGVdlCiMC3NlcGFsIHdpZHRolGhISwBoEIhlXZQojAxwZXRhbCBsZW5ndGiUaEhLAGgQiGVd
+lCiMC3BldGFsIHdpZHRolGhISwBoEIhlXZQojARpcmlzlGhMSwGMLElyaXMtc2V0b3NhLCBJcmlz
+LXZlcnNpY29sb3IsIElyaXMtdmlyZ2luaWNhlIllZXNoNksBdWheKGiESwKGlGiGSwKGlGiISwKG
+lGiKSwKGlHSUaHUpaHpojF2UKIwLSXJpcy1zZXRvc2GUjA9JcmlzLXZlcnNpY29sb3KUjA5Jcmlz
+LXZpcmdpbmljYZRlhpSFlGh7XZR1YmV1Lg==
+</properties>
+		<properties node_id="1" format="pickle">gASV6wEAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAABSAAAAnQAABTEAAAMUAAAAUwAAALwAAAUwAAAD
+EwAAAAAAAAAABkAAAABTAAAAvAAABTAAAAMTlIwJc2VsZWN0aW9ulF2UjA92aXN1YWxfc2V0dGlu
+Z3OUfZSMBWdyYXBolH2UjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jh
+bmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJYW5ub3Rf
+dmFylE5K/v///4aUjAljb2xvcl92YXKUjAt0aXBvX3phcGF0b5RLZYaUjAlncm91cF92YXKUjA9t
+YXRlcmlhbF96YXBhdG+US2WGlIwMc2VsZWN0ZWRfdmFylIwGcHJlY2lvlEtmhpRoCX2UaAtLAXWM
+CmF0dHJpYnV0ZXOUfZQojAJpZJRLAmgYSwFoG0sBjAxjb2xvcl96YXBhdG+USwFoHksCdYwFbWV0
+YXOUfZQojAZub21icmWUSwOMCGFwZWxsaWRvlEsDjAVlbWFpbJRLA3V1YmF1Lg==
+</properties>
+		<properties node_id="2" format="pickle">gASVPgIAAAAAAAB9lCiMB2NvbXBhcmWUSwKMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNvcmRlcl9i
+eV9pbXBvcnRhbmNllImMHG9yZGVyX2dyb3VwaW5nX2J5X2ltcG9ydGFuY2WUiYwTc2F2ZWRXaWRn
+ZXRHZW9tZXRyeZRDQgHZ0MsAAwAAAAAAWAAAAFoAAAPdAAAC0gAAAFkAAAB5AAAD3AAAAtEAAAAA
+AAAAAAZAAAAAWQAAAHkAAAPcAAAC0ZSMEHNob3dfYW5ub3RhdGlvbnOUiIwLc2hvd19sYWJlbHOU
+iIwNc2lnX3RocmVzaG9sZJRHP6mZmZmZmZqMCnNvcnRfZnJlcXOUiYwIc3RhdHRlc3SUSwCMCXN0
+cmV0Y2hlZJSIjAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lk
+Z2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJYXR0cmlidXRllIwG
+cHJlY2lvlEtmhpSMCWdyb3VwX3ZhcpSMC3RpcG9femFwYXRvlEtlhpSMCXNlbGVjdGlvbpQpSv7/
+//+GlGgNSwF1jAphdHRyaWJ1dGVzlH2UKIwCaWSUSwJoG0sBjA9tYXRlcmlhbF96YXBhdG+USwGM
+DGNvbG9yX3phcGF0b5RLAWgYSwJ1jAVtZXRhc5R9lCiMBm5vbWJyZZRLA4wIYXBlbGxpZG+USwOM
+BWVtYWlslEsDdXViYXUu
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
