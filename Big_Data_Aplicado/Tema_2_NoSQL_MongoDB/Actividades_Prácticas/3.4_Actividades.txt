@@ -1,0 +1,107 @@
+3.4. Ejercicios Prácticos
+Vamos a trabajar con dos colecciones: profesores y asignaturas
+
+Estas son las consultas propuestas:
+
+Insertar, Modificar y Borrar
+
+Listar todos los profesores // db.profesores.find()
+
+db.profesores.find()
+
+Insertar un profesor y una asignatura en la colección
+
+db.profesores.insertOne( { _id: 1, nombre_profe:"Carlos", edad:46})
+db.asignaturas.insertOne( { _id: 1, nombre_asignatura:"Castellano", temas:"15", curso:"2ºESO", profesor:1})
+
+Actualizar la asignatura del profesor que acabáis de insertar
+
+db.asignaturas.update({_id:1}, {$set:{nombre_asignatura:"Matemáticas"}})
+
+Borrar el profesor que se acaba de insertar
+
+db.profesores.deleteOne({nombre_profe:"Carlos"})
+
+Actualizar todas las edades de los profesores en una unidad
+
+# ESTO SERÍA PARA ACTUALIZAR LA EDAD DE TODOS A 20 db.profesores.update({}, {$set: {edad:20}})
+# PARA HACER LO QUE PIDE EL EJERCICIO SERÍA: db.profesores.update({}, {$inc: {edad:1}}, {multi: true})
+
+Usar upsert para añadir un nuevo profesor con nombre “Aitor”, en caso de que no lo encuentre, añade un campo “Personal” con valor ”Fijo”
+
+db.profesores.update({nombre:"Aitor"}, {$set: {personal:"Fijo"}}, {upsert:true})
+
+Selectores de consultas
+
+Listar las asignaturas con 23 alumnos
+
+db.asignaturas.find({ alumnos: 23 })
+
+Listar las asignaturas con 23 alumnos o más
+
+db.asignaturas.find({ alumnos:{$gte:23} })
+
+Listar las asignaturas que imparte el profesor Juan
+
+db.asignaturas.find({ profesor: {$eq:"Juan"}})
+
+Listar las asignaturas que NO imparte el profesor Juan
+
+db.asignaturas.find({ profesor: {$not:{$eq:"Juan"}}})
+
+Listar las asignaturas que imparten Juan o Laura
+
+db.asignaturas.find({ profesor: { $nin: ["Juan", "Laura"] } })
+
+Listar las asignaturas que NO imparten ni Juan ni Laura
+
+db.asignaturas.find({ profesor: { $nin: ["Juan", "Laura"] } })
+
+Imagina que tienes una base de datos llamada iot_data para el Proyecto 1.
+
+Base de datos de sensores
+
+Crea una base de datos llamada iot_data.
+
+create database iot_data
+
+Crea una colección llamada dispositivos.
+
+create collection dispositivos
+
+Inserta un documento en la colección dispositivos con la siguiente información:
+id_sensor: "temp01"
+tipo: "temperatura"
+ubicacion: "sala_servidores"
+valor_actual: 24.5
+unidad: "celsius"
+
+db.dispositivos.insertOne({id_sensor:"temp01", tipo:"temperatura", ubicacion:"sala_servidores", valor_actual: 24.5, unidad: "celcius"})
+
+
+Inserta dos nuevos documentos en la colección dispositivos: uno para un sensor de humedad (hum01) y otro para un sensor de CO2 (co201), con valores y ubicaciones que elijas.
+
+db.dispositivos.insertOne({id_sensor:"hum01", tipo:"humedad", ubicacion:"laboratorio", valor_actual: 55.2, unidad: "porcentaje"})
+
+db.dispositivos.insertOne({id_sensor: "co201", tipo: "CO2", ubicacion: "oficina_principal",
+valor_actual: 420, unidad: "ppm"})
+
+Busca y muestra solo los documentos de los sensores de tipo "temperatura".
+
+db.dispositivos.find({tipo:"temperatura"})
+
+Actualiza el valor actual del sensor con id_sensor: "temp01" a 25.8.
+
+db.dispositivos.update({id_sensor:"temp01"}, {$set:{valor_actual:25.8}})
+
+Verifica que el valor se haya actualizado correctamente buscando el documento del sensor.
+
+db.dispositivos.find({id_sensor:"temp01"})
+
+Elimina el documento del sensor de CO2 (co201) de la colección.
+
+  db.dispositivos.deleteOne( {id_sensor:"co201"})
+
+Verifica que el documento ya no exista.
+
+db.dispositivos.find({id_sensor:"co201"})
